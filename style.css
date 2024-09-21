@@ -1,0 +1,18 @@
+body {
+    margin: 0%;
+    background-color: rgba(251, 211, 162, 0.979);
+}
+
+header {
+    /* comentario para o css, ele é feito com barra e * */
+     display: flex;
+     background-color: rgb(236, 206, 167);
+     margin: 0;
+     padding-left: 100px;
+     padding-right: 100px;
+     align-items: center;
+     justify-content: space-between;
+}
+.logo-header{
+    width: 25% ;
+}
