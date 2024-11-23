@@ -13,22 +13,22 @@
 <body>
     <header>
         <img class="logo-header" src="img/logo.png" alt="Pão, logo, padaria, chapa, pão na chapa, pães, logo padaria, doces, massas, " srcset="">
-        <nav>
+        <nav class="menu">
             <ul>
                 <li>
-                    <a>Inicio</a>
+                    <a href="#introducao">Inicio</a>
                 </li>
 
                 <li>
-                    <a>Sobre</a>
+                    <a href="#sobre-nos">Sobre</a>
                 </li>
 
                 <li>
-                    <a>Produtos</a>
+                    <a href="#produtos">Produtos</a>
                 </li>
 
                 <li>
-                    <a>Contato</a>
+                    <a href="#contato">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -36,7 +36,8 @@
     </header>
     <main>
 
-        <section>
+        <section id="introducao">
+        <div>
             <h2>
                 Olá, Seja muito bem vindo(a) a Padaria caixão
             </h2>
@@ -48,10 +49,17 @@
                 Nosso objetivo é proporcionar uma experiência única a cada mordida,
                 com delícias que remetem ao aconchego do lar,
                 a Padaria caixão é o lugar ideal para encontrar bolos caseiros e doces irresistíveis que fazem você se
-                sentir em casa.
-            </p>
+                sentir em casa.  </p>
+        </div>
+
+        <div>
+            <img width="500px" src="./img/pao.png">
+        </div>
+
         </section>
-        <section>
+
+        <section id="sobre-nos">
+            <div></div>
             <h2>Sobre nós </h2>
             <p>
                 Somos uma padaria especializada em bolos caseiros e doces,
@@ -61,37 +69,97 @@
                 para entregar sempre o melhor para nossos clientes e você,
             </p>
         </section>
-        <section>
+
+        <section id="produtos">
             <h2>Produtos</h2>
-            <div>
-                <div>
+            <div class="conteudo-produtos">
+               <div  class="produtos">
                     <h3>Bolos;</h3>
                     <p>Temos bolos de mandioca e bolos de pote caseiros, feito com produtos de altissima qualidade.</p>
                 </div>
 
-                <div>
+                <div class="produtos">
                     <h3>Doces;</h3>
                     <p>Temos diversos doces como, pudins, brigadeiros etc...</p>
                 </div>
 
-                <div>
+                <div class="produtos">
                     <h3>Pães;</h3>
                     <p>Nosso pães são feitos pela manhã e pela tarde, com massas de alta qualidade.</p>
                 </div>
             </div>
-        </section>
+        </section >
     </main>
     <footer>
-        <section>
-            <h2>Contatos</h2>
-            <p>Email: contato@#padariacaixao.com</p>
-            <p>Telefone: (11) 1234-5678</p>
-            <p>Endereço: Rua do pão,123 - Centro- São paulo</p>
-        </section>
-        <p>&copy; 2024 - Padaria caixão -
-            Todos Direitos Reservados</p>
-    </footer>
+        <section id="contato">
+            <h2>Fale conosco</h2>
 
+          <p> Entre em contato conosco atarvés do nosso formulário abaixo,
+             Responderemos assim que possível! </p> 
+             <form id="form-contato">
+                <div class="grupo">
+                    <p>Nome:</p>
+                    <input 
+                     type="text"
+                     id="nome"
+                     placeholder="Digite seu nome completo:" 
+                     required 
+                     />
+                </div>
+
+                <div class="grupo">
+                    <p>Email:</p>
+                    <input 
+                     type="Email"
+                     id="Email"
+                     placeholder="Digite seu Email:" 
+                     required 
+                     />
+                </div>
+
+                <div class="grupo">
+                    <p>Telefone:</p>
+                    <input 
+                     type="tel"
+                     id="Telefone"
+                     placeholder="Digite seu Telefone:" 
+                     required 
+                     />
+                </div>
+
+                <div class="grupo">
+                    <p>Mensagem:</p>
+                    <textarea
+                    id="Mensagem"
+                    placeholder="Digite sua mensagem:"
+                    rows="5"
+                    cols="50"
+                    required> </textarea>
+                </div>
+
+                <button type="submit"> Enviar mensagem</button>
+                </form>
+        </section>     
+        <p class="direitos-autorais"> &copy; 2024 - Padaria Caixão - Todos direitos reservados </p>
+    </footer>
+  
+    <script>
+    const form = document.getElementById("form-contato");
+
+    form.addEventListener('submit', function(event){
+      event.preventDefault();
+
+        const Nome = document.getElementById('nome').value;
+        const Email = document.getElementById('Email').value;
+        const Telefone = document.getElementById('Telefone').value;
+        const Mensagem = document.getElementById('Mensagem').value;
+
+        alert("Dados do contato: " + Nome +  Email + Telefone + Mensagem)
+    
+    
+    
+    })
+    </script>
 </body>
 
 </html>
